@@ -1,0 +1,47 @@
+# --- Project Leah: Rubble Search (SAR Indoor) Preset ---
+# Purpose: Low sensitivity, high stability, crash recovery enabled.
+
+# 1. THROTTLE SCALING (Precision)
+# Limits power to 60% for fine altitude control indoors.
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 60
+
+# 2. CRASH RECOVERY (Safety)
+# If the drone bumps a wall, it will try to self-level instead of disarming.
+set crash_recovery = ON
+
+# 3. SMOOTH RATES (Adrenaline Filter)
+# Lowers stick sensitivity to prevent jittery movements.
+set roll_rc_rate = 50
+set pitch_rc_rate = 50
+set yaw_rc_rate = 50
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 30
+
+# 4. NAVIGATION
+# Ensures the drone is ready for Angle/Horizon mode usage.
+set small_angle = 180
+
+save
+
+♤ ESC Settings (Motor Torque)
+​Crucial Step: For rubble environments, you need "grip" and torque, not smoothness.
+•​Open BLHeliSuite32 or ESC-Configurator.
+​Read Settings.
+​•Change PWM Frequency to 24kHz.
+​•Why? 24kHz provides maximum low-end torque. It prevents the drone from "washing out" in tight corners or turbulent air.
+​Write/Save Settings.
+​  
+♤Battery Calibration (Safety)
+​•Crucial Step: Do not fly blind. You must know exactly when to turn back.
+​•Plug in a fully charged battery.
+​•Go to the Power & Battery tab in Betaflight.
+​•Compare the "Voltage" reading to your battery voltage (e.g., 16.8V for 4S, 25.2V for 6S).
+​•Adjust the Scale until they match perfectly.
+​Save. 
+
+♠ Signal Integrity (Crucial for Concrete/Rubble)
+• VTX Power: Set to **MAX** available (800mW or >1W recommended). Low power = video loss behind walls.
+• OSD Elements: Enable **Link Quality (LQ)** and **RSSI dBm**. Do not rely on RSSI %.
+• Warning: If LQ drops below 70, turn back immediately.
