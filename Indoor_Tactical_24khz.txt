@@ -1,0 +1,9 @@
+# 🇺🇸 INDOOR/TACTICAL (24kHz)
+# 🇺🇦 ВНУТРІШНІЙ/ТАКТИЧНИЙ (24 кГц)
+
+set thrust_linear = 0
+set dshot_idle_value = 450
+set feedforward_transition = 30
+set rc_smoothing_auto_factor = 10
+set vbat_sag_compensation = 0
+save
