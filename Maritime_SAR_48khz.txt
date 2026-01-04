@@ -1,0 +1,9 @@
+# 🇺🇸 MARITIME/LONG RANGE (48kHz)
+# 🇺🇦 МОРСЬКИЙ/ДАЛЕКИЙ (48 кГц)
+
+set thrust_linear = 25
+set dshot_idle_value = 550
+set feedforward_transition = 0
+set rc_smoothing_auto_factor = 30
+set vbat_sag_compensation = 100
+save
