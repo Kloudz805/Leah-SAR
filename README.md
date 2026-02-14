@@ -1,6 +1,6 @@
 # Leah-SAR: Extreme Environment FPV Presets
 
-**Leah-SAR** is an open-source project dedicated to developing high-reliability FPV drone presets for **Search and Rescue (SAR)** operations and **humanitarian aid missions in Ukraine**. 
+​"Bridging AI with FPV for rapid-deployment Search & Rescue. This project utilizes the AI-FPV Bridge to enable autonomous stabilization and victim detection in GPS-denied extreme environments (mines, collapsed structures, and high-interference zones). Currently awaiting hardware authorization for field deployment."
 
 Our goal is to ensure drone operators in critical, high-stakes environments can rely on their equipment to perform in extreme weather and signal conditions.
 
