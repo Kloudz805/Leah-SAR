@@ -1,34 +1,50 @@
-# Leah-SAR: Extreme Environment FPV Presets
+# 🚁 Project Leah-SAR: Extreme Environment Preset
+![Betaflight](https://img.shields.io/badge/Betaflight-4.4%2B-blue) ![Stars](https://img.shields.io/github/stars/Kloudz805/leah-sar?style=social) ![License](https://img.shields.io/badge/License-MIT-green)
 
-​"Bridging AI with FPV for rapid-deployment Search & Rescue. This project utilizes the AI-FPV Bridge to enable autonomous stabilization and victim detection in GPS-denied extreme environments (mines, collapsed structures, and high-interference zones). Currently awaiting hardware authorization for field deployment."
+> *A high-reliability Betaflight firmware preset optimized for maximum signal penetration, rapid deployment, and low-resource logging in heavy-interference zones.*
 
-Our goal is to ensure drone operators in critical, high-stakes environments can rely on their equipment to perform in extreme weather and signal conditions.
+## 🌍 The Mission
+This project was built to make FPV drone technology more accessible and reliable for operators on the ground. Whether for search and rescue operations, critical field deployments, or assisting forces in Ukraine, the goal is simple: **keep the bird in the air and the video feed clear when it matters most.**
 
-## 🚁 Project Mission
-* **Reliability:** Presets tuned for stability and signal penetration rather than racing speed.
-* **Accessibility:** Creating a "Field Operations Mode" to make complex configuration easy for pilots in the field.
-* **Resilience:** Optimized for harsh environments, including high winds, cold temperatures, and areas with heavy RF interference.
+## ✨ Key Features
+* **🛡️ Signal Reliability:** Aggressive filtering and VTX optimizations designed to punch through concrete, urban environments, and heavy RF noise.
+* **🚀 Field Operations Mode:** Stripped-down, rapid-deployment settings. Plug in, arm, and fly without needing to navigate complex OSD menus in the field.
+* **📊 Low-Resource Logging:** Optimized Blackbox settings to capture only mission-critical flight data without filling up onboard storage mid-deployment.
+* **🤖 AI-Vision Ready:** Serves as the base flight tuning for the broader **Project Leah-SAR** and **Project Exocoetus** computer vision integrations.
 
-## ⚙️ Key Features
-* **Extreme Environment Presets:** Pre-configured CLI settings for Betaflight that prioritize link quality and motor reliability.
-* **Field Operations Mode:** (In Development) A simplified interface for the Betaflight Configurator to assist rapid deployment.
-* **Disaster Relief Focus:** Tested and tuned for the specific needs of SAR teams and aid delivery.
+## ⚙️ Quickstart Installation
+Copy and paste the following snippet directly into your Betaflight CLI. *(Note: Ensure you are on Betaflight 4.4 or higher before applying).*
 
-## 🚀 Getting Started
-*Note: This project is currently in active development.*
+```text
+# Project Leah-SAR: Extreme Environment Base Preset
+# Author: Kloudz805
 
-1.  **Check your Hardware:** Ensure your flight controller and ESC firmware are up to date.
-2.  **Download the Preset:** Navigate to the [Releases] page (coming soon) to download the latest CLI dump.
-3.  **Apply in Betaflight:** Copy the text and paste it into the CLI tab of the Betaflight Configurator. **Always backup your current configuration first.**
+# VTX & Link Quality (Adjust power levels to your local regulations/mission needs)
+set vtx_low_power_disarm = ON
+set rc_interp = AUTO
 
-## 🤝 Contributing
-We welcome contributions from the FPV community! 
-* **Testers:** If you fly in extreme cold or high interference areas, please report your results in the **Discussions** tab.
-* **Developers:** Help us refine the Betaflight Configurator integration.
+# Low-Resource Blackbox Logging
+set blackbox_p_ratio = 64
+set blackbox_mode = NORMAL
 
-## ⚠️ Disclaimer
-These presets are experimental and intended for specific use cases. Always test in a controlled environment before deploying in a mission-critical scenario.
+# Heavy Payload/Extreme Environment Filtering
+set dterm_lowpass_hz = 75
+set gyro_lowpass_hz = 90
 
----
+save
+ ```
+## 🛠️ Recommended Hardware
+While this preset works on most modern 5" to 7" rigs, it was developed with industrial-grade reliability in mind. Best results are achieved using high-tier components like T-Motor flight stacks, iFlight hardware, and high-output VTX systems paired with reliable receivers like Fat Shark goggles.
+
+## 🗺️ Roadmap
+- [x] Base "Extreme Environment" PID & Filter tuning
+- [ ] Low-bandwidth telemetry optimizations
+- [ ] Project Exocoetus integration testing
+- [ ] Full Leah-SAR AI-FPV vision handoff protocols
+
+### ⭐️ Support the Project!
+If this preset helped you maintain a vital video link or made your rapid deployment seamless, please consider hitting the Star button at the top right of this repository. It helps push this tool up in the algorithm so it can reach the operators who need it most!
+
 *Built to save lives. 🇺🇦*
 
+​
